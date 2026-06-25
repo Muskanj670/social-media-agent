@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
 from google.adk.agents import Agent
-from google.adk.agents import SequentialAgent
+from google.adk.agents import SequentialAgent, ParallelAgent
 from google.adk.agents.callback_context import CallbackContext
 from google.adk.models import Gemini
 from google.adk.tools.google_search_tool import google_search
@@ -480,7 +480,7 @@ root_agent = SequentialAgent(
     sub_agents=[
         brief_agent,
         dispatcher_agent,
-        SequentialAgent(
+        ParallelAgent(
             name="PipelineRunner",
             description="Runs dispatcher-selected pipelines; others are skipped.",
             # Fix 6: Corrected order to A (images/posts) -> B (reports) -> C (videos)
