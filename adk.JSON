@@ -1,0 +1,10 @@
+{
+    "apps": [
+        {
+            "id": "myagent",
+            "entrypoint": "app:run",
+            "title": "My Agent",
+            "default": true
+        }
+    ]
+}

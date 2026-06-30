@@ -1,37 +1,11 @@
-# =========================================================
-# ContentOrchestrator - Python Dependencies
-# =========================================================
-
-# Core Agent Framework
-google-adk>=0.3.0
-google-genai>=0.4.0
-
-# LLM & API
-google-cloud-generativeai>=0.11.0
-
-# Utilities
+﻿requests>=2.31.0
 python-dotenv>=1.0.0
-pydantic>=2.0.0
-pydantic-settings>=2.0.0
-
-# Optional: Performance & Monitoring
-requests>=2.31.0
-
-# Optional: For advanced deployments
+google-adk>=1.0.0
 fastapi>=0.104.0
 uvicorn>=0.24.0
-sqlalchemy>=2.0.0
-
-# Development & Testing
+pydantic>=2.0.0
+Pillow>=9.0.0
+imageio>=2.30.0
 pytest>=7.4.0
-pytest-asyncio>=0.21.0
 black>=23.0.0
 pylint>=3.0.0
-
-# =========================================================
-# Version Notes
-# =========================================================
-# - google-adk: Latest stable (check docs for compatibility)
-# - pydantic: v2+ required for output_schema support
-# - python: 3.10+ required
-# =========================================================
